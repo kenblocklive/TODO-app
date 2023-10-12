@@ -39,26 +39,22 @@
 // function removeAttributes(atribute) {
 //   for (let i = 0; i < list.length; i++) {
 //     list[i].addEventListener("click", () => {
-//       list[i].removeAttribute(atribute);
+//       list[i].classList.remove(atribute);
 //     });
 //   }
 // }
-// removeAttributes("class");
+// removeAttributes("completed");
 
 // task 7 = 30m
 // const list = document.getElementsByTagName("li");
-// function changeStatus(attributeKey, attributeValue) {
+// function changeStatus() {
 //   for (let i = 0; i < list.length; i++) {
 //     list[i].addEventListener("click", () => {
-//       if (list[i].className === attributeValue) {
-//         list[i].removeAttribute(attributeKey);
-//       } else {
-//         list[i].setAttribute(attributeKey, attributeValue);
-//       }
+//       list[i].classList.toggle("completed");
 //     });
 //   }
 // }
-// changeStatus("class", "completed");
+// changeStatus();
 
 //task 8 = 50s
 
