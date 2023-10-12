@@ -36,26 +36,29 @@
 //task 6 = 1m 7s
 
 // const list = document.getElementsByTagName("li");
-// for (let i = 0; i < list.length; i++) {
-//   list[i].addEventListener("click", () => {
-//     list[i].removeAttribute("class");
-//   });
-// }
-
-//task 7 = 30m
-// const list = document.getElementsByTagName("li");
-// function changeStatus() {
+// function removeAttributes(atribute) {
 //   for (let i = 0; i < list.length; i++) {
 //     list[i].addEventListener("click", () => {
-//       if (list[i].className === "completed") {
-//         list[i].removeAttribute("class");
+//       list[i].removeAttribute(atribute);
+//     });
+//   }
+// }
+// removeAttributes("class");
+
+// task 7 = 30m
+// const list = document.getElementsByTagName("li");
+// function changeStatus(attributeKey, attributeValue) {
+//   for (let i = 0; i < list.length; i++) {
+//     list[i].addEventListener("click", () => {
+//       if (list[i].className === attributeValue) {
+//         list[i].removeAttribute(attributeKey);
 //       } else {
-//         list[i].setAttribute("class", "completed");
+//         list[i].setAttribute(attributeKey, attributeValue);
 //       }
 //     });
 //   }
 // }
-// changeStatus();
+// changeStatus("class", "completed");
 
 //task 8 = 50s
 
