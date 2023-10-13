@@ -5,7 +5,10 @@ const listItems = list.getElementsByTagName("li");
 
 button.addEventListener("click", () => {
   const listItem = document.createElement("li");
+  const buttonDelete = document.createElement("button");
+  buttonDelete.textContent = "Delete";
   listItem.textContent = input.value;
+  listItem.appendChild(buttonDelete);
   list.appendChild(listItem);
   newEvent(listItem);
   input.value = null;
