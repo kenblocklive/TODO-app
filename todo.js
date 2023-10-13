@@ -11,9 +11,6 @@ button.addEventListener("click", () => {
   input.value = null;
 });
 
-for (let i = 0; i < listItems.length; i++) {
-  newEvent(listItems[i]);
-}
 function newEvent(listItem) {
   listItem.addEventListener("click", () => {
     if (listItem.className === "completed") {
