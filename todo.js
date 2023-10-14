@@ -5,21 +5,17 @@ const listItems = list.getElementsByTagName("li");
 
 button.addEventListener("click", () => {
   const listItem = document.createElement("li");
-  const buttonDelete = document.createElement("button");
-  buttonDelete.textContent = "Delete";
+  const checkBox = document.createElement("input");
+  checkBox.setAttribute("type", "checkbox");
   listItem.textContent = input.value;
-  listItem.appendChild(buttonDelete);
+  listItem.prepend(checkBox);
   list.appendChild(listItem);
-  newEvent(listItem);
+  newEvent(listItem, checkBox);
   input.value = null;
 });
 
-function newEvent(listItem) {
-  listItem.addEventListener("click", () => {
-    if (listItem.className === "completed") {
-      listItem.removeAttribute("class");
-    } else {
-      listItem.setAttribute("class", "completed");
-    }
+function newEvent(listItem, checkBox) {
+  checkBox.addEventListener("click", () => {
+    listItem.classList.toggle("completed");
   });
 }
