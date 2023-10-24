@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+.container {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24.2px;
+  font-family: "Inter", sans-serif;
+  padding: 20px 0;
+}
+
+.add-wish {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 40px;
+}
+
+.input-add {
+  width: 373px;
+  height: 33px;
+  border: solid 1px #3f51b5;
+  border-radius: 6px;
+}
+
+.btn-add {
+  background-color: #3f51b5;
+  min-width: 63px;
+  min-height: 33px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.52px;
+}
+
+.btn-add:hover {
+  background-color: #2d3d96;
+  cursor: pointer;
+}
+.btn-add:active {
+  background-color: rgb(13, 29, 117);
+}
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wish-item {
+  background-color: #f9f9f9;
+  min-width: 960px;
+  min-height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.wish-item:hover {
+  background-color: #ffffff;
+}
+
+.wish-text {
+  display: flex;
+  gap: 10px;
+  background-color: #f9f9f9;
+}
+
+.wish-text:hover {
+  background-color: #ffffff;
+}
+
+.input-checkbox {
+  height: 10px;
+}
+
+li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  list-style-type: none;
+  background-color: #f9f9f9;
+}
+li:hover {
+  background-color: #ffffff;
+}
+
+.btn-delete {
+  width: 28px;
+  height: 28px;
+  border: #ffd3d3;
+  border-radius: 50%;
+  background-color: #ffd3d3;
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: #ffffff;
+}
+.btn-delete:hover {
+  background-color: #ff5f5f;
+}
+.btn-delete:active {
+  background-color: #fa0707;
+}
