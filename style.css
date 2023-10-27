@@ -2,121 +2,157 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #f2f2f2;
 }
-.container {
-  width: 1000px;
-  max-width: 100%;
-  margin: 0 auto;
+
+input {
+  font-size: 16px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
-h1 {
-  text-align: center;
-  text-transform: capitalize;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 24.2px;
-  font-family: "Inter", sans-serif;
+:root {
+  --color-blue-100: #3f51b5;
+  --color-blue-200: #3545a5;
+  --color-blue-300: #19277c;
+  --color-red-100: #ffd3d3;
+  --color-red-200: #ff5f5f;
+  --color-red-300: #e92d2d;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f9f9f9;
+  --color-gray-200: #ececec;
+  --color-gray-300: #cecece;
+}
+
+body {
+  background-color: var(--color-gray-200);
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+header {
   padding: 20px 0;
 }
 
-.add-wish {
+h1 {
+  text-align: center;
+}
+
+main {
+  padding: 40px 0;
+}
+
+.controls {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 40px;
+}
+.controls input {
+  max-width: 300px;
 }
 
-.input-add {
-  width: 373px;
-  height: 33px;
-  border: solid 1px #3f51b5;
-  border-radius: 6px;
-}
-
-.btn-add {
-  background-color: #3f51b5;
-  min-width: 63px;
-  min-height: 33px;
+input [type="text"] {
   padding: 9px 18px;
+  width: 100%;
+  border: none;
   border-radius: 6px;
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14.52px;
 }
 
-.btn-add:hover {
-  background-color: #2d3d96;
+input [type="text"]:focus {
+  outline: 1px solid var(--color-blue);
+}
+
+input [type="text"]::placeholder {
+  color: var(--color-gray-300);
+}
+
+.btn {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: transform 0.1s ease-in-out;
 }
-.btn-add:active {
-  background-color: rgb(13, 29, 117);
+
+.btn:active {
+  transform: scale(0.9);
 }
-.wishes-list {
+
+.btn-primary {
+  background-color: var(--color-blue-100);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--color-blue-200);
+}
+.btn-primary:active {
+  background-color: var(--color-blue-300);
+}
+
+.btn-error {
+  background-color: var(--color-red-100);
+  color: white;
+}
+.btn-error:hover {
+  background-color: var(--color-red-200);
+}
+.btn-error:active {
+  background-color: var(--color-red-300);
+}
+li > .btn > svg {
+  stroke: var(--color-red-300);
+}
+li > .btn:hover > svg {
+  stroke: white;
+}
+
+.btn-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+ul {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.wish-item {
-  background-color: #f9f9f9;
-  min-width: 960px;
-  min-height: 38px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-}
-
-.wish-item:hover {
-  background-color: #ffffff;
-}
-
-.wish-text {
-  display: flex;
-  gap: 10px;
-  background-color: #f9f9f9;
-}
-
-.wish-text:hover {
-  background-color: #ffffff;
-}
-
-.input-checkbox {
-  height: 10px;
-}
-
 li {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14.52px;
-  list-style-type: none;
-  background-color: #f9f9f9;
-}
-li:hover {
-  background-color: #ffffff;
-}
-
-.btn-delete {
-  width: 28px;
-  height: 28px;
-  border: #ffd3d3;
-  border-radius: 50%;
-  background-color: #ffd3d3;
+  list-style: none;
+  padding: 5px 10px;
+  background-color: var(--color-gray-50);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
 }
+li:hover {
+  background-color: white;
+}
 
-.icon:hover {
-  fill: #ffffff;
+li span {
+  flex: 1 0 auto;
 }
-.btn-delete:hover {
-  background-color: #ff5f5f;
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--color-blue);
 }
-.btn-delete:active {
-  background-color: #fa0707;
+li.completed {
+  background-color: var(--color-gray-100);
+}
+
+li.completed > span {
+  color: var(--color-gray-300);
+  text-decoration: line-through;
 }

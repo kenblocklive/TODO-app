@@ -8,40 +8,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>What the task</h1>
-      <div class="add-wish">
-        <input class="input-add" type="text" placeholder="type wish name..." />
-        <button class="btn-add">ADD</button>
+      <header>
+        <div class="container">
+          <h1>To do list</h1>
+        </div>
+      </header>
+      <div class="controls">
+        <input
+          id="todo-text"
+          placeholder="type what to do"
+          type="text"
+          name=""
+          id=""
+        />
+        <button class="btn btn-primary" onclick="addItem()">Add</button>
       </div>
-      <div class="wishes-list">
-        <div class="wish-item">
-          <div class="wish-text">
-            <input class="input-checkbox" type="checkbox" name="" id="" />
-            <li>text</li>
-          </div>
-          <button class="btn-delete">
-            <img src="/trash-icon.svg" alt="" srcset="" />
-          </button>
-        </div>
-        <div class="wish-item">
-          <div class="wish-text">
-            <input class="input-checkbox" type="checkbox" name="" id="" />
-            <li>text</li>
-          </div>
-          <button class="btn-delete">
-            <img src="/trash-icon.svg" alt="" srcset="" />
-          </button>
-        </div>
-        <div class="wish-item">
-          <div class="wish-text">
-            <input class="input-checkbox" type="checkbox" name="" id="" />
-            <li>text</li>
-          </div>
-          <button class="btn-delete">
-            <img src="/trash-icon.svg" alt="" srcset="" />
-          </button>
-        </div>
-      </div>
+      <ul class="list"></ul>
     </div>
   </body>
   <script src="./script.js"></script>
